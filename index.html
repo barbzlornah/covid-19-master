@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="corona virus (covid-19) statistics and information"
+    />
+    <meta name="”robots”" content="”index," follow” />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="COVID-19 statistics and information" />
+    <meta
+      property="og:description"
+      content="Current statistics of people infected with covid-19 and the neccessary information for prevention techniques. and definition of terms"
+    />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="covid-19" />
+    <meta name="twitter:title" content="COVID-19 statistics and informationE" />
+    <meta
+      name="twitter:description"
+      content="Current statistics of people infected with covid-19 and the neccessary information for prevention techniques. and definition of terms"
+    />
+    <meta name="twitter:site" content="@BarbaraLornah" />
+    <meta name="twitter:creator" content="@BarbaraLornah" />
+
+    <title>covid-19</title>
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/52ac5380d0.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- cusitom css and bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap/starter.css" />
+  </head>
+  <body>
+    <!-- Back to top button -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><i class="fas fa-house-user"></i></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto mb-2 mb-md-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#table"
+                >View Statistics</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#links" class="nav-link">
+                External Links
+              </a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <a
+              href="https://github.com/barbzlornah/Covid19Analysis.git"
+              class="nav-link gh-logo"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="container mt-4">
+      <div class="starter-template text-center py-5 px-3">
+        <h1>COVID-19 Statistics Updates</h1>
+        <p class="lead">Global statistics and per country analysis</p>
+      </div>
+      <div class="wrapper">
+        <div class="statistic">
+          <div class="card">
+            <div class="card-header">
+              Total WorldWide Confirmed Cases
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+                No. of people tested positive for covid-19
+              </h5>
+              <p class="card-text" id="total_cases"></p>
+              <a
+                href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public"
+                target="_blank"
+                class="btn btn-warning"
+                >Preventive Measures</a
+              >
+            </div>
+          </div>
+
+          <!-- global summary boxes -->
+          <div class="container mt-4 summary">
+            <div class="row">
+              <!-- first card: new cases -->
+              <div class="col-sm">
+                <div
+                  class="card text-primary border-primary mb-3 card1"
+                  style="max-width: 18rem;"
+                >
+                  <div class="card-header">New Cases</div>
+                  <div class="card-body">
+                    <p class="card-text" id="new_case"></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm">
+                <div
+                  class="card text-success border-success mb-3"
+                  style="max-width: 18rem;"
+                >
+                  <div class="card-header">Total Recovery</div>
+                  <div class="card-body">
+                    <p class="card-text" id="total_recovered"></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm">
+                <div
+                  class="card text-dark border-dark mb-3"
+                  style="max-width: 18rem;"
+                >
+                  <div class="card-header">Total Deaths</div>
+                  <div class="card-body">
+                    <p class="card-text" id="total_death"></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm">
+                <div
+                  class="card text-danger border-danger mb-3"
+                  style="max-width: 18rem;"
+                >
+                  <div class="card-header">New Deaths</div>
+                  <div class="card-body">
+                    <p class="card-text" id="new_death"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- All country data display table -->
+          <div class="table-responsive" id="table">
+            <table class="table" id="countries_stat">
+              <thead data-sticky-header="true">
+                <tr>
+                  <th scope="col">Country</th>
+                  <th scope="col">Cases</th>
+                  <th scope="col">Deaths</th>
+                  <th scope="col">serious critical</th>
+                  <th scope="col">total recovered</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+      <div class="container text-center">
+        <small>Copyright &copy; codid19</small>
+      </div>
+    </footer>
+    <!-- bootstrap js -->
+    <!-- JavaScript and dependencies -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
