@@ -4,7 +4,7 @@
   "description": "covid19 statistics",
   "repository": {
     "type": "git",
-    "url": "https://github.com/barbzlornah/Covid19Analysis.git"
+    "url": "git+https://github.com/barbzlornah/Covid19Analysis.git"
   },
   "bugs": {
     "url": "https://github.com/barbzlornah/covid-19/issues"
