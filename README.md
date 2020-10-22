@@ -3,8 +3,13 @@ COVID 19
 
 
 User Stories
+
 1.See Global covid-19 statistics
+
 2.See statistics per country
+
 3.Find emergency contact informtion
+
 4.See preventions methods
+
 5.Term definitions (related to corona virus)
